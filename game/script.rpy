@@ -10,6 +10,8 @@ label start:
 
     scene mc_room
 
+    play music "main_music.mp3" loop
+
     "В одном далеком городе жил один парень"
 
     "Жил не тужил"
@@ -21,6 +23,8 @@ label start:
     mc "Нужно идти завтракать"
     
     mc "Надеюсь, мама что-то приготовила"
+
+    play sound "steps.mp3"
 
     hide mc outside_normal with moveoutright
 
