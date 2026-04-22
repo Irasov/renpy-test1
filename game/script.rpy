@@ -42,7 +42,7 @@ label start:
     show dad home_normal at right with moveinright:
         xzoom -1
 
-    dad "Доброе утро, сынок"
+    dad "Доброе утро, {font=gui/fonts/Kurale.ttf}сынок{/font}"
 
     show mc outside_normal at left2
 

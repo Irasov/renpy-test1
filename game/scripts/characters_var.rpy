@@ -1,6 +1,6 @@
-default mc = Character("MC", color="#ff0000")
+default mc = Character("MC", color="#ff0000", what_font="../gui/fonts/Eugusto.otf")
 default wife = Character("Wife", color="#00ff00")
-default dad = Character("Dad", color="#0000ff")
+default dad = Character("Dad", color="#0000ff", who_font="../gui/fonts/movage.otf")
 
 image mc outside_normal = "images/sprites/mc/outside_normal.png"
 
