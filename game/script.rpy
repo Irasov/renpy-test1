@@ -2,6 +2,10 @@
     $ left2 = Position(xalign=-0.2, yalign=1.0)
     $ right = Position(xalign=0.8, yalign=1.0)
 
+default name = "Вася"
+default age = 20
+default adult = False
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -12,11 +16,43 @@ label start:
 
     play music "main_music.mp3" loop
 
+    menu: 
+        "Вам есть 18?"
+        "да":
+            $ adult = True
+        "нет":
+            pass
+    if adult:
+        "Отлично, играем!"
+    else:
+        "Извнин, но не сегодня!"
+        $renpy.quit()
+
     "В одном далеком городе жил один парень"
 
     "Жил не тужил"
 
     show mc outside_normal at left2
+
+    mc "Меня зовут [name]"
+
+    mc "Мне [age] лет"
+
+    mc "Шутка, хаха"
+
+    menu: 
+        mc "На самомом деле меня зовут..."
+
+        "Петя":
+            $ name = "Петя"
+
+        "Вася":
+            $ name = "Вася"
+
+        "Димас":
+            $ name = "Димас"
+
+    mc "Мое настоящее имя [name]"
 
     mc "Снова утро, нафиг надо"
 
