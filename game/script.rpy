@@ -5,6 +5,53 @@
 default name = "Вася"
 default age = 20
 default adult = False
+default money = 0
+
+label work:
+
+    "Главному герою нужно заработать 200 рублей"
+
+    "Сейчас у него [money] рублей"
+
+    mc "Дааа...это будет трудно"
+
+    menu: 
+
+        "Работать в пол силы (+100 рублей)":
+            
+            mc "Я немного устал..."
+
+            $ money += 100
+
+        "Работать в полуную силу (+200 рублей)":
+
+            mc "Я вырубаюсь от усталости..."
+
+            $ money += 200
+
+        "Отдыхать":
+
+            pass
+        
+    "У героя сейчас [money] рублей"
+
+    if money >= 200:
+
+        mc "Мне больше не нвдо работать"
+
+    elif money == 100:
+
+        mc "Еще немного и можно заканчивать"
+
+        call work
+
+    else:
+
+        mc "Нужно приняться за работу..."
+
+        call work
+return
+
 
 label start:
 
@@ -13,6 +60,10 @@ label start:
     # images directory to show it.
 
     scene mc_room
+
+    show mc outside_normal at left2
+
+    call work
 
     play music "main_music.mp3" loop
 
@@ -31,8 +82,6 @@ label start:
     "В одном далеком городе жил один парень"
 
     "Жил не тужил"
-
-    show mc outside_normal at left2
 
     mc "Меня зовут [name]"
 
