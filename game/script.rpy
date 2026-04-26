@@ -1,125 +1,108 @@
 ﻿init:
-    $ left2 = Position(xalign=-0.2, yalign=1.0)
-    $ right = Position(xalign=0.8, yalign=1.0)
+
+    $ left2 = Position(xalign=0.1, yalign=1.0)
+
+    $ right2 = Position(xalign=0.6, yalign=1.0)
+
+
 
 default name = "Вася"
 default age = 20
 default adult = False
+
+default work_counter = 0
+
 default money = 0
 
-label work:
 
-    "Главному герою нужно заработать 200 рублей"
-
-    "Сейчас у него [money] рублей"
-
-    mc "Дааа...это будет трудно"
-
-    menu: 
-
-        "Работать в пол силы (+100 рублей)":
-            
-            mc "Я немного устал..."
-
-            $ money += 100
-
-        "Работать в полуную силу (+200 рублей)":
-
-            mc "Я вырубаюсь от усталости..."
-
-            $ money += 200
-
-        "Отдыхать":
-
-            pass
-        
-    "У героя сейчас [money] рублей"
-
-    if money >= 200:
-
-        mc "Мне больше не нвдо работать"
-
-    elif money == 100:
-
-        mc "Еще немного и можно заканчивать"
-
-        call work
-
-    else:
-
-        mc "Нужно приняться за работу..."
-
-        call work
-return
 
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene mc_room
 
-    show mc outside_normal at left2
+    show mc outside_normal at left
 
-    call work
+    "Данная игра распространяется только для 18+ игроков"
 
-    play music "main_music.mp3" loop
+    menu:
 
-    menu: 
-        "Вам есть 18?"
-        "да":
+        "Вам есть 18 лет?"
+
+        "Да":
+
             $ adult = True
-        "нет":
+
+        "Почти":
+
             pass
-    if adult:
-        "Отлично, играем!"
+
+        "Нет, но да":
+
+            pass
+
+    
+    if adult == True:
+
+        "Отлично. Тогда запускаю игру"
+
     else:
-        "Извнин, но не сегодня!"
+
+        "Я вынужден закрыть игру, так как вам нет 18 лет."
+
         $renpy.quit()
 
-    "В одном далеком городе жил один парень"
+    "В одном далеком городе, жил обычный парень"
 
-    "Жил не тужил"
+    "Жил он как и все остальные парни его возраста"
 
-    mc "Меня зовут [name]"
+    show mc outside_normal at left
+
+    mc "Привет, меня зовут [name]"
 
     mc "Мне [age] лет"
 
-    mc "Шутка, хаха"
+    mc "Шутка, хехе"
 
-    menu: 
-        mc "На самомом деле меня зовут..."
+    menu:
+        
+        mc "На самом деле меня зовут..."
 
         "Петя":
+
             $ name = "Петя"
 
-        "Вася":
-            $ name = "Вася"
+        "Игорь":
 
-        "Димас":
-            $ name = "Димас"
+            $ name = "Игорь"
 
-    mc "Мое настоящее имя [name]"
+        "Павел":
 
-    mc "Снова утро, нафиг надо"
+            $ name = "Павел"
 
+    mc "На самом деле меня зовут [name]"
+
+    mc "..."
+
+    mc "Как же я ненавижу начало дня"
+    
     mc "Нужно идти завтракать"
     
-    mc "Надеюсь, мама что-то приготовила"
+    mc "Надеюсь, {u}мама{/u} что-то приготовила"
 
     play sound "steps.mp3"
 
     hide mc outside_normal with moveoutright
 
-    scene kitchen with fade
 
-    show mc outside_normal at left2 with moveinleft
+    scene kitchen with fade
+    
+
+    show mc outside_normal at left with moveinleft
 
     mc "Как вкусно пахнет"
 
-    show mc outside_smile at left2
+    show mc outside_smile at left
 
     mc "Мама приготовила БОРЩ!!!!"
 
@@ -127,9 +110,9 @@ label start:
     show dad home_normal at right with moveinright:
         xzoom -1
 
-    dad "Доброе утро, {font=gui/fonts/Kurale.ttf}сынок{/font}"
+    dad "Доброе утро, сынок"
 
-    show mc outside_normal at left2
+    show mc outside_normal at left
 
     mc "Доброе утро, пап"
 
@@ -149,17 +132,80 @@ label start:
 
         "В 8":
 
-            call dial_1
+            mc "Я буду дома в 8"
+
+            dad "Отлично"
 
         "Не знаю":
 
-            call dial_2
+            mc "Не знаю"
 
-    dad "Мама хотела сделать семейный ужин"   
+            mc "До 11 вернусь"
+
+            dad "Ты уж постарайся"
+
+    dad "Мама хотела сделать семейный ужин"
 
     mc "Тогда я вернусь пораньше"
 
+    dad "Мама рассказывала, что ты устроился на работу"
+
+    mc "На подработку скорее"
+
+    mc "Хочу накопить себе на компьютер"
+
+    dad "О, это здорово"
+
+    dad "Ладно, ты завтракай, а я пойду..."
+
+    hide dad home_normal at right with moveoutright
+
+    "Вам нужно помочь главному герою купить компьютер"
+
+    "Для этого заработайте 1000 рублей"
+
+    "Когда у вас будет нужна сумма, опция покупки появится ниже"
+
+    menu:
+        
+        mc "Так, чем заняться?"
+
+        "Пойти на работу" if work_counter <= 1:
+
+            hide mc outside_normal at left with moveoutright
+
+            jump work
+
+        "Пойти в комнату":
+
+            hide mc outside_normal at left with moveoutright
+
+            jump room
+
+        "Выйти на улицу":
+
+            hide mc outside_normal at left with moveoutright
+
+            jump street
 
 
 
-    return
+    "Конец игры"
+
+    # This ends the game.
+
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+

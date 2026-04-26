@@ -1041,7 +1041,7 @@ translate None strings:
     old "Retry"
     new "Retry"
 
-    # renpy/common/00compat.rpy:467
+    # renpy/common/00compat.rpy:456
     old "Fullscreen"
     new "Fullscreen"
 
@@ -1193,75 +1193,75 @@ translate None strings:
     old "Back (B)"
     new "Back (B)"
 
-    # renpy/common/_errorhandling.rpym:758
+    # renpy/common/_errorhandling.rpym:757
     old "Open"
     new "Open"
 
-    # renpy/common/_errorhandling.rpym:760
+    # renpy/common/_errorhandling.rpym:759
     old "Opens the traceback.txt file in a text editor."
     new "Opens the traceback.txt file in a text editor."
 
-    # renpy/common/_errorhandling.rpym:762
+    # renpy/common/_errorhandling.rpym:761
     old "Copy BBCode"
     new "Copy BBCode"
 
-    # renpy/common/_errorhandling.rpym:764
+    # renpy/common/_errorhandling.rpym:763
     old "Copies the traceback.txt file to the clipboard as BBcode for forums like https://lemmasoft.renai.us/."
     new "Copies the traceback.txt file to the clipboard as BBcode for forums like https://lemmasoft.renai.us/."
 
-    # renpy/common/_errorhandling.rpym:766
+    # renpy/common/_errorhandling.rpym:765
     old "Copy Markdown"
     new "Copy Markdown"
 
-    # renpy/common/_errorhandling.rpym:768
+    # renpy/common/_errorhandling.rpym:767
     old "Copies the traceback.txt file to the clipboard as Markdown for Discord."
     new "Copies the traceback.txt file to the clipboard as Markdown for Discord."
 
-    # renpy/common/_errorhandling.rpym:800
+    # renpy/common/_errorhandling.rpym:799
     old "An exception has occurred."
     new "An exception has occurred."
 
-    # renpy/common/_errorhandling.rpym:829
+    # renpy/common/_errorhandling.rpym:828
     old "Rollback"
     new "Rollback"
 
-    # renpy/common/_errorhandling.rpym:831
+    # renpy/common/_errorhandling.rpym:830
     old "Attempts a roll back to a prior time, allowing you to save or choose a different choice."
     new "Attempts a roll back to a prior time, allowing you to save or choose a different choice."
 
-    # renpy/common/_errorhandling.rpym:834
+    # renpy/common/_errorhandling.rpym:833
     old "Ignore"
     new "Ignore"
 
-    # renpy/common/_errorhandling.rpym:838
+    # renpy/common/_errorhandling.rpym:837
     old "Ignores the exception, allowing you to continue."
     new "Ignores the exception, allowing you to continue."
 
-    # renpy/common/_errorhandling.rpym:840
+    # renpy/common/_errorhandling.rpym:839
     old "Ignores the exception, allowing you to continue. This often leads to additional errors."
     new "Ignores the exception, allowing you to continue. This often leads to additional errors."
 
-    # renpy/common/_errorhandling.rpym:844
+    # renpy/common/_errorhandling.rpym:843
     old "Reload"
     new "Reload"
 
-    # renpy/common/_errorhandling.rpym:846
+    # renpy/common/_errorhandling.rpym:845
     old "Reloads the game from disk, saving and restoring game state if possible."
     new "Reloads the game from disk, saving and restoring game state if possible."
 
-    # renpy/common/_errorhandling.rpym:849
+    # renpy/common/_errorhandling.rpym:848
     old "Console"
     new "Console"
 
-    # renpy/common/_errorhandling.rpym:851
+    # renpy/common/_errorhandling.rpym:850
     old "Opens a console to allow debugging the problem."
     new "Opens a console to allow debugging the problem."
 
-    # renpy/common/_errorhandling.rpym:864
+    # renpy/common/_errorhandling.rpym:863
     old "Quits the game."
     new "Quits the game."
 
-    # renpy/common/_errorhandling.rpym:886
+    # renpy/common/_errorhandling.rpym:885
     old "Parsing the script failed."
     new "Parsing the script failed."
 
@@ -1457,79 +1457,79 @@ translate None strings:
     old "The console is using short representations. To disable this, type 'long', and to re-enable, type 'short'"
     new "The console is using short representations. To disable this, type 'long', and to re-enable, type 'short'"
 
-    # renpy/common/00console.rpy:813
+    # renpy/common/00console.rpy:810
     old "help: show this help\n help <expr>: show signature and documentation of <expr>"
     new "help: show this help\n help <expr>: show signature and documentation of <expr>"
 
-    # renpy/common/00console.rpy:837
+    # renpy/common/00console.rpy:834
     old "Help may display undocumented functions. Please check that the function or\nclass you want to use is documented.\n\n"
     new "Help may display undocumented functions. Please check that the function or\nclass you want to use is documented.\n\n"
 
-    # renpy/common/00console.rpy:846
+    # renpy/common/00console.rpy:843
     old "commands:\n"
     new "commands:\n"
 
-    # renpy/common/00console.rpy:856
+    # renpy/common/00console.rpy:853
     old " <renpy script statement>: run the statement\n"
     new " <renpy script statement>: run the statement\n"
 
-    # renpy/common/00console.rpy:858
+    # renpy/common/00console.rpy:855
     old " <python expression or statement>: run the expression or statement"
     new " <python expression or statement>: run the expression or statement"
 
-    # renpy/common/00console.rpy:866
+    # renpy/common/00console.rpy:863
     old "clear: clear the console history"
     new "clear: clear the console history"
 
-    # renpy/common/00console.rpy:870
+    # renpy/common/00console.rpy:867
     old "exit: exit the console"
     new "exit: exit the console"
 
-    # renpy/common/00console.rpy:878
+    # renpy/common/00console.rpy:875
     old "stack: print the return stack"
     new "stack: print the return stack"
 
-    # renpy/common/00console.rpy:900
+    # renpy/common/00console.rpy:897
     old "load <slot>: loads the game from slot"
     new "load <slot>: loads the game from slot"
 
-    # renpy/common/00console.rpy:913
+    # renpy/common/00console.rpy:910
     old "save <slot>: saves the game in slot"
     new "save <slot>: saves the game in slot"
 
-    # renpy/common/00console.rpy:924
+    # renpy/common/00console.rpy:921
     old "reload: reloads the game, refreshing the scripts"
     new "reload: reloads the game, refreshing the scripts"
 
-    # renpy/common/00console.rpy:932
+    # renpy/common/00console.rpy:929
     old "watch <expression>: watch a python expression\n watch short: makes the representation of traced expressions short (default)\n watch long: makes the representation of traced expressions as is"
     new "watch <expression>: watch a python expression\n watch short: makes the representation of traced expressions short (default)\n watch long: makes the representation of traced expressions as is"
 
-    # renpy/common/00console.rpy:969
+    # renpy/common/00console.rpy:966
     old "unwatch <expression>: stop watching an expression"
     new "unwatch <expression>: stop watching an expression"
 
-    # renpy/common/00console.rpy:1015
+    # renpy/common/00console.rpy:1012
     old "unwatchall: stop watching all expressions"
     new "unwatchall: stop watching all expressions"
 
-    # renpy/common/00console.rpy:1036
+    # renpy/common/00console.rpy:1033
     old "jump <label>: jumps to label"
     new "jump <label>: jumps to label"
 
-    # renpy/common/00console.rpy:1052
+    # renpy/common/00console.rpy:1049
     old "short: Shorten the representation of objects on the console (default)."
     new "short: Shorten the representation of objects on the console (default)."
 
-    # renpy/common/00console.rpy:1056
+    # renpy/common/00console.rpy:1053
     old "long: Print the full representation of objects on the console."
     new "long: Print the full representation of objects on the console."
 
-    # renpy/common/00console.rpy:1060
+    # renpy/common/00console.rpy:1057
     old "escape: Enables escaping of unicode symbols in unicode strings."
     new "escape: Enables escaping of unicode symbols in unicode strings."
 
-    # renpy/common/00console.rpy:1064
+    # renpy/common/00console.rpy:1061
     old "unescape: Disables escaping of unicode symbols in unicode strings and print it as is (default)."
     new "unescape: Disables escaping of unicode symbols in unicode strings and print it as is (default)."
 

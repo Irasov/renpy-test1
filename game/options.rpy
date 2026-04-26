@@ -18,12 +18,12 @@ define config.name = _("Test Game")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "0.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -62,7 +62,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/main_music.mp3"
 
 
 ## Transitions #################################################################
@@ -117,8 +117,8 @@ define config.window_hide_transition = Dissolve(.2)
 
 ## Preference defaults #########################################################
 
-## Controls the default text speed. The default, 0, is infinite, while any other
-## number is the number of characters per second to type out.
+## Controls the default text speed. The default, 0, is infinite, while any
+## other number is the number of characters per second to type out.
 
 default preferences.text_cps = 0
 
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "TestGame-1776665909"
+define config.save_directory = "TestGame-1756298410"
 
 
 ## Icon ########################################################################
@@ -172,8 +172,8 @@ init python:
     ##
     ## ** matches all characters, including the directory separator.
     ##
-    ## For example, "*.txt" matches txt files in the base directory, "game/
-    ## **.ogg" matches ogg files in the game directory or any of its
+    ## For example, "*.txt" matches txt files in the base directory,
+    ## "game/**.ogg" matches ogg files in the game directory or any of its
     ## subdirectories, and "**.psd" matches psd files anywhere in the project.
 
     ## Classify files as None to exclude them from the built distributions.
