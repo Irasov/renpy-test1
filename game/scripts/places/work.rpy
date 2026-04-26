@@ -2,11 +2,11 @@ label work:
 
     scene work_pizza
 
-    show screen test
+    #show screen test
 
-    hide window
+    #hide window
 
-    $renpy.pause()
+    #$renpy.pause()
 
     show screen show_money
 

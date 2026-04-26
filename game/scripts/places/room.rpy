@@ -4,7 +4,9 @@ label room:
 
     show mc outside_normal at left with moveinleft
 
-    show screen show_money
+    #show screen show_money
+
+    show screen show_money_button
     
     menu:
     
