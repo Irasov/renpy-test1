@@ -10,26 +10,44 @@ screen show_money:
 
 default show_money_enable = 0
 
+transform btn_hover:
+  on hover:
+    linear 0.2 matrixcolor BrightnessMatrix(0.2)
+  on idle:
+    linear 0.2 matrixcolor BrightnessMatrix(0.0)
+
 screen show_money_button:
 
   vbox xpos 10 ypos 10:
 
     textbutton "{i}Вернуться в комнату" action Jump('room') text_color "#00FF00" text_hover_color "#fff" text_size 42
     if show_money_enable == 0:
-      textbutton "{i}Показать деньги" text_color "#00FF00" text_hover_color "#fff" text_size 42 action [
-        SetVariable('show_money_enable', 1),
-        Show('show_money')
-      ]
+      imagebutton:
+        idle 'images/btn-money.png'
+        hover 'images/btn-money.png' at btn_hover
+        #im.MatrixColor('images/btn-money.png', im.matrix.brightness(0.3))
+        action [
+          SetVariable('show_money_enable', 1),
+          Show('show_money')
+        ]
     else:
-      textbutton "{i}Скрыть деньги" text_color "#00FF00" text_hover_color "#fff" text_size 42 action [
-        SetVariable('show_money_enable', 0),
-        Hide('show_money')
-      ]
-
-
+      imagebutton:
+        idle 'images/btn-money.png'
+        hover 'images/btn-money.png' at btn_hover
+        #im.MatrixColor('images/btn-money.png', im.matrix.brightness(0.3))
+        action [
+          SetVariable('show_money_enable', 0),
+          Hide('show_money')
+        ]
 
 screen test:
 
   modal True
 
-  add 'images/btn-money.png' yalign 0.5 xalign 0.3
+  imagebutton xpos 490 ypos 450:
+    idle 'images/btn-money.png'
+    hover 'images/btn-money.png' at btn_hover
+    action [
+      Hide('test'),
+      Jump('room')
+    ]
