@@ -26,6 +26,8 @@ screen show_money_button:
         idle 'images/btn-money.png'
         hover 'images/btn-money.png' at btn_hover
         #im.MatrixColor('images/btn-money.png', im.matrix.brightness(0.3))
+        hovered  Show("money_help")
+        unhovered  [Hide("money_help"), Hide("money_help2")]
         action [
           SetVariable('show_money_enable', 1),
           Show('show_money')
@@ -35,10 +37,18 @@ screen show_money_button:
         idle 'images/btn-money.png'
         hover 'images/btn-money.png' at btn_hover
         #im.MatrixColor('images/btn-money.png', im.matrix.brightness(0.3))
+        hovered  Show("money_help2")
+        unhovered [Hide("money_help"), Hide("money_help2")]
         action [
           SetVariable('show_money_enable', 0),
           Hide('show_money')
         ]
+
+screen money_help:
+  add 'money_help.png' xpos 80 ypos 126
+
+screen money_help2:
+  add 'money_help2.png' xpos 80 ypos 126
 
 screen test:
 
