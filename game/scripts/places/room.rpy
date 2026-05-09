@@ -7,6 +7,8 @@ label room:
     #show screen show_money
 
     show screen show_money_button
+
+    show screen info_show_popup
     
     menu:
     
